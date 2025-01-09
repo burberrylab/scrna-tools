@@ -1,0 +1,11 @@
+# replace <SOURCE> with absolute path to location of fastq files and reference genome.
+# replace <DESTINATION> with absolute path to where results will go (should also have cellranger config)
+name: cellranger
+services:
+    cellranger:
+        stdin_open: true  
+        tty: true         
+        volumes:
+            - <SOURCE>:/home/source
+            - <DESTINATION>:/home/cellranger_data
+        image: nfcore/cellranger:7.2.0

@@ -1,0 +1,11 @@
+name: azimuth
+services:
+    azimuth:
+        stdin_open: true
+        tty: true
+        ports:
+            - 3838:3838
+        volumes:
+            - /home/sara/Research/scrna_for_other_lab/azi_testing/azi_refs:/reference-data
+        image: satijalab/azimuth:seurat5
+        command: /bin/bash

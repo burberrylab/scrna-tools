@@ -1,3 +1,5 @@
+# replace <SOURCE> with absolute path to location of reference files (demo.rds, homologs.rds, idx.annoy , ref.Rds).
+# replace <DESTINATION> with absolute path to where results will go (should also have Seurat object save file)
 name: azimuth
 services:
     azimuth:
@@ -6,6 +8,7 @@ services:
         ports:
             - 3838:3838
         volumes:
-            - /home/sara/Research/scrna_for_other_lab/azi_testing/azi_refs:/reference-data
+            - <SOURCE>:/home/reference-data
+            - <DESTINATION>:/home/results
         image: satijalab/azimuth:seurat5
         command: /bin/bash

@@ -24,14 +24,16 @@ The Nix package manager is separate from NixOS. NixOS is not necessary to use th
  3. Run `$ nix --version` to verify that your installation is working.
  4. Go to your project directory and run `$ nix run nixpkgs#hello`. If it successfully prints "Hello, world!", then the nix package manager is ready to go!
 Then, r
-##### Nix package manager instrustions (without sudo or root access):
- 1. Go to <https://releases.nixos.org/?prefix=nix/> and click on a version of Nix. Use either the latest release, or the the version used in the most recent [stable release](https://nixos.org/manual/nixos/stable/release-notes.html#ch-release-notes). At the time of writing this, I have version 2.24.10.
+##### Nix package manager instrustions (without sudo or root access):  
+Note: This may not work on all systems. If you have errors when attempting to use this, contact your system administrator for further guidance.
+
+ 1. Go to <https://releases.nixos.org/?prefix=nix/> and click on a version of Nix. Use either the latest release, or the the version used in the most recent [stable release](https://nixos.org/manual/nixos/stable/release-notes.html#ch-release-notes). At the time of writing this, I have version 2.24.10, but the latest binary release is 2.23.5.
  2. Use [Hydra](https://hydra.nixos.org/project/nix) to download a stable binary release of Nix.
-    - Assuming an x86_64-linux system and Nix version 2.24, run the following:
+    - Assuming an x86_64-linux system and Nix version 2.23, run the following:
     ```
     $ mkdir -p ~/.local/bin
     $ cd ~/.local/bin
-    $ curl -L https://hydra.nixos.org/job/nix/maintenance-2.24/binaryTarball.x86_64-linux/latest/download-by-type/file/binary-dist > nix
+    $ curl -L https://hydra.nixos.org/job/nix/maintenance-2.23/buildStatic.x86_64-linux/latest/download-by-type/file/binary-dist > nix
     $ chmod +x nix
     $ ./nix --version
     ```

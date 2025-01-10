@@ -1,0 +1,20 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: scrna-tools
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Sara
+    family-names: Ramaiah
+    email: sar193@case.edu
+    affiliation: Case Western Reserve University
+    orcid: 'https://orcid.org/0009-0004-3537-152X'
+repository-code: 'https://github.com/burberrylab/scrna-tools'
+abstract: >-
+  Assorted config and script files for analyzing single-cell
+  RNA sequencing data.
+license: MIT
